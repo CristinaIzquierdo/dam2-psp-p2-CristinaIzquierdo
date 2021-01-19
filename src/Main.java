@@ -3,9 +3,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Cola cola = new Cola();
-        Productor p = new Productor(cola);
-        Consumidor c = new Consumidor(cola);
+		Monitor monitor = new Monitor();
+        Productor p = new Productor(monitor);
+        Consumidor c = new Consumidor(monitor);
 
         p.start();
         c.start();

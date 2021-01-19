@@ -1,9 +1,9 @@
 
 public class Consumidor extends Thread{
-	private Cola cola;
+	private Monitor monitor;
 	
-	public Consumidor(Cola c) {
-		cola = c;
+	public Consumidor(Monitor c) {
+		monitor = c;
 	}
 	
 	public void run() {
@@ -11,7 +11,7 @@ public class Consumidor extends Thread{
 	
 	
 		for(int i=0; i < 10; i ++) {
-			c = cola.recoger();
+			c = monitor.recoger();
 			System.out.println("Recogido la letra: " +c);
 			try {
 				sleep((int)(Math.random()*2000));
